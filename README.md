@@ -3,7 +3,7 @@ NGINX proxy for PHP-FPM tasks
 
 ### How to use it
 
-`docker run -t registry.latenightdev.net/alekitto/nginx-ecs-php-fpm:main`
+`docker run -t registry.latenightdev.net/alekitto/nginx-ecs-php-fpm`
 
 #### Environment variables
 
