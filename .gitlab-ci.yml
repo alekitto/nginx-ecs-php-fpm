@@ -18,7 +18,7 @@ build:
               fi
             fi
             TAGS="$CI_REGISTRY_IMAGE:$VERSION"
-            if [ $(expr match "$VERSION" 'v[0-9]\+\.[0-9]\+\.[0-9]\+') -ne 0 ]; then
+            if [ $(expr match "$VERSION" '[0-9]\+\.[0-9]\+\.[0-9]\+') -ne 0 ]; then
               MINOR=${VERSION%.*}
               MAJOR=${MINOR%.*}
               TAGS="$TAGS ${CI_REGISTRY_IMAGE}:${MINOR} ${CI_REGISTRY_IMAGE}:${MAJOR} ${CI_REGISTRY_IMAGE}:latest"
