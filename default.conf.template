@@ -12,7 +12,7 @@ server {
 
     set $logging 1;
     location /_status {
-        if ( $http_user_agent ~* "HealthChecker" ) {
+        if ( $http_user_agent ~* "(HealthChecker|Go-http-client)" ) {
             set $logging 0;
         }
 
