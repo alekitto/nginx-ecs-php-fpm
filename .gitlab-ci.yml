@@ -27,7 +27,7 @@ build:
             fi
             export TAGS
 
-        - docker buildx create --use --driver kubernetes --driver-opt rootless=false --driver-opt install.qemu=true
+        - docker buildx create --use --driver kubernetes --driver-opt rootless=false --driver-opt qemu.install=true --bootstrap
         - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
     script:
